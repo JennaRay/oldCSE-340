@@ -7,6 +7,7 @@
 
 body{
   width: 100vw;
+  height: fit-content;
   text-align: center;
   margin: 0px;
   padding: 0px;
@@ -23,6 +24,7 @@ nav{
   background-color: black;
   position: absolute;
   left: 0;
+  border-radius: 0px;
 }
 nav ul {
   display: flex;
@@ -38,9 +40,8 @@ header {
   height: fit-content;
   padding-top: .5rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr .5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  text-align: left;
 }
 .siteName a, #tools a{
   text-decoration:none;
@@ -51,13 +52,16 @@ header {
   grid-row: 2/3;
   font-size: xx-large;
   font-weight: bold;
+  align-self: left;  
+  text-align: left;                                                                      
 }
 #tools {
-  grid-column: 2/3;
+  grid-column: 3/4;
   grid-row: 1/2;
 }
 main {
-  margin-top: 4rem;
+  margin-top: 2rem;
+  border-radius: 0px;
 }
 h1{
   text-align: left;
@@ -78,7 +82,7 @@ h1{
   flex-direction: column;
   text-align: left;
   position: absolute;
-  top: 16rem;
+  top: 14rem;
   left: 1rem;
 }
 #hero-text h3 {
@@ -144,7 +148,7 @@ table tr:nth-child(even) td{
 }
 footer {
   display:block;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -152,6 +156,7 @@ footer {
   color: black;
   padding: 1rem;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 450px) {
@@ -159,7 +164,6 @@ footer {
 
 body{
   width: 100%;
-  text-align: center;
   margin: 0px;
   margin-top: 1rem;
   padding: 0px;
@@ -174,7 +178,6 @@ header, main, footer, nav {
   margin: auto;
   background-color: white;
   border: 5px solid cyan;
-  border-radius: .5rem;
   
 }
 nav{
@@ -183,6 +186,7 @@ nav{
   border-bottom:none;
   position: relative;
   padding: .5rem;
+  margin-bottom: 0px;
 }
 nav ul {
   display: flex;
@@ -191,24 +195,34 @@ nav ul {
   justify-content:space-around;
 }
 header {
+  width: 100%;
   height: fit-content;
-  display: flex;
-  flex-direction: row;
   text-decoration: none;
   border-bottom: none;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr auto 1fr;
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: 0px;
 }
 #tools {
   grid-column: 3/4;
+  float: right;
+  text-align: right;
 }
 main {
   border-top: none;
-  padding-top: none;
+  padding-top: 0px;
+  margin-top: -1rem;
+  margin-bottom:1rem;
+}
+#hero {
+  margin-top: 0px;
 }
 #hero-text {
   position: unset;
-  position: absolute;
-  margin-left: 4rem;
+  top: unset;
+  position:relative;
+  top: -15rem;
 }
 footer {
   margin-top: 5rem;
