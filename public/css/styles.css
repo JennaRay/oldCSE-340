@@ -37,10 +37,14 @@ nav ul {
   margin: 0px;
   padding: 0px;
 }
-nav ul li{
+nav ul li a{
   display: block;
   padding: 1rem;
   margin: 0px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 header {
   height: fit-content;
@@ -161,6 +165,21 @@ footer {
   margin-bottom: 1rem;
 }
 
+#inv-display li a{
+text-decoration: none;
+color: black;}
+#inv-display {
+  list-style-type: none;
+}
+#inv-display span {
+  margin-left: 1rem;
+  padding: .5rem;
+  background-color: lightgray;
+  font-size: 16px;
+  color: darkgreen;
+}
+
+
 @media screen and (min-width: 450px) {
   
 
@@ -192,7 +211,7 @@ nav ul {
   list-style-type: none;
   justify-content:space-around;
 }
-nav ul li:hover {
+nav ul li a:hover {
   background-color: greenyellow;
   color: black;
 }
